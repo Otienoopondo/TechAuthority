@@ -73,7 +73,7 @@ export default function HomePage() {
       } else {
         alert('Submission failed. Try again.');
       }
-    } catch (_error) {
+    } catch {
       alert('Error submitting the form.');
     }
   };
@@ -194,7 +194,7 @@ export default function HomePage() {
       {/* Success Message Popup */}
       {showSuccess && (
         <div className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 bg-green-600 text-white px-6 py-3 rounded shadow-md animate-fadeIn">
-          ✅ Submission successful. We'll get to you soon.
+          ✅ Submission successful. We&apos;ll get to you soon.
         </div>
       )}
     </section>
