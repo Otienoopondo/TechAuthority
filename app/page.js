@@ -73,7 +73,7 @@ export default function HomePage() {
       } else {
         alert('Submission failed. Try again.');
       }
-    } catch (error) {
+    } catch (_error) {
       alert('Error submitting the form.');
     }
   };
@@ -107,9 +107,7 @@ export default function HomePage() {
       <div className="flex flex-col items-center text-center backdrop-blur-sm bg-black/50 px-4 z-10 relative h-full justify-start pt-[20vh] md:pt-[26vh]">
         <h1
           className="text-4xl md:text-6xl font-extrabold text-cyan-400 mb-4"
-          style={{
-            textShadow: '0 0 0.5px #0ff, 0 0 2px #0ff',
-          }}
+          style={{ textShadow: '0 0 0.5px #0ff, 0 0 2px #0ff' }}
         >
           TechAuthority
         </h1>
@@ -184,7 +182,7 @@ export default function HomePage() {
                 placeholder="Message"
                 rows="3"
                 className="w-full border px-3 py-2 rounded"
-              />
+              ></textarea>
               <button type="submit" className="w-full bg-cyan-600 hover:bg-cyan-700 text-white py-2 rounded">
                 Send Message
               </button>
@@ -193,9 +191,9 @@ export default function HomePage() {
         </div>
       )}
 
-      {/* Success Message */}
+      {/* Success Message Popup */}
       {showSuccess && (
-        <div className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 bg-green-500 text-white px-6 py-3 rounded shadow-lg">
+        <div className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 bg-green-600 text-white px-6 py-3 rounded shadow-md animate-fadeIn">
           ✅ Submission successful. We'll get to you soon.
         </div>
       )}
